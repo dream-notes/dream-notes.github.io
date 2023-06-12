@@ -6,6 +6,7 @@
     <title>Dream</title>
     
     <link rel="stylesheet" href="/helper/style.css">
+    <link rel="stylesheet" href="/helper/index.css">
     <link rel="stylesheet" href="/helper/nav.css">
     <script src="/helper/main.js" defer></script>
     
@@ -15,9 +16,22 @@
     <header class="faq_header">
         <h1 class="faq_header-title">Dream Notes</h2>
     </header>
-    <section class="note-section">
-        <a href="/nahw" class="notes-link">Nahw</a>
-    </section>
+
+    <div class="link_container">
+        <ul id="links">
+        </ul>
+    </div>
+
+    <script>
+        const pages = ["Nahw"]
+        const pre = "/"
+
+        let links = "";
+        for (let i = 0; i < pages.length; i++){
+            links+= `<li><a href="${pages[i].toLowerCase()}">${pages[i]}</a></li>`
+        }
+        document.getElementById("links").innerHTML = links;
+    </script>
 
 </body>
 </html>
